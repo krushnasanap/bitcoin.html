@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Free Bitcoin Giveaway</title>
+<style>
+body{
+  margin:0;
+  background:#0b0b0b;
+  color:#00ff99;
+  font-family:monospace;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  text-align:center;
+}
+.box{
+  border:2px solid #00ff99;
+  padding:30px;
+  width:80%;
+  max-width:400px;
+}
+h1{color:gold;}
+button{
+  margin-top:20px;
+  padding:10px 20px;
+  background:gold;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+}
+#msg{margin-top:20px; font-size:18px;}
+.scary{color:red; font-size:24px;}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h1>🎉 Free Bitcoin Giveaway 🎉</h1>
+  <p>Claim your free Bitcoin now!</p>
+  <button onclick="start()">Claim Now</button>
+  <div id="msg"></div>
+</div>
+
+<script>
+const msg = document.getElementById("msg");
+
+function start(){
+  msg.innerText="Connecting to blockchain...";
+  setTimeout(()=>{msg.innerText="Checking device...";},2000);
+  setTimeout(()=>{msg.innerText="Scanning location...";},4000);
+  setTimeout(()=>{msg.innerText="IP Address Found";},6000);
+  setTimeout(()=>{msg.className="scary"; msg.innerText="YOU SHOULD NOT BE HERE";},8000);
+  setTimeout(()=>{msg.innerText="SYSTEM LOCKED";},10000);
+  setTimeout(()=>{msg.innerText="SENDING DATA...";},12000);
+  setTimeout(()=>{
+    msg.className="";
+    msg.innerText="😂 JUST KIDDING 😂\nYou got pranked!";
+  },15000);
+}
+</script>
+
+</body>
+</html>
